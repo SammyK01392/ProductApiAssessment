@@ -8,9 +8,7 @@
     <Project Path="../Infrastructure/Infrastructure.csproj" />
     <Project Path="ProductApiAssessment.csproj" />
   </Folder>
-  <Folder Name="/tests/">
-    <Project Path="../API.Tests/API.Tests.csproj" />
-    <Project Path="../Application.Tests/Application.Tests.csproj" />
-    <Project Path="../Infrastructure.Tests/Infrastructure.Tests.csproj" />
-  </Folder>
+  <Project Path="../../tests/API.Tests/API.Tests.csproj" />
+  <Project Path="../../tests/Application.Tests/Application.Tests.csproj" />
+  <Project Path="../../tests/Infrastructure.Tests/Infrastructure.Tests.csproj" />
 </Solution>

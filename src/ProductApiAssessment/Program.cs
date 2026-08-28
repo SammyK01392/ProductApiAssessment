@@ -160,6 +160,13 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// Auto-apply pending EF Core migrations on startup (useful for Docker/demo environments)
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.Migrate();
+}
+
 app.Run();
 
 public partial class Program { }   // required for API.Tests WebApplicationFactory
